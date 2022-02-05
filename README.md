@@ -35,15 +35,6 @@ echo "DEVICE partitions" > /etc/mdadm.conf
 
 mdadm --detail --scan --verbose | awk '/ARRAY/ {print}' >> /etc/mdadm.conf
 
-
-**Созданный файл:**
-
-cat /etc/mdadm.conf
-
-DEVICE partitions
-
-ARRAY /dev/md0 level=raid5 num-devices=5 metadata=1.2 name=otuslinux:0 UUID=b4d3da63:dc6dd4d1:493d0a01:3bded655
-
 ## ** Создание GPT раздела и 5 партиций**
 
 **Создаем раздел GPT на RAID:**
